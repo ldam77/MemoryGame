@@ -2,12 +2,26 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Memory Game</title>
   </head>
   <body>
-    <form id="form">
-      <button type="submit">Submit</button>
-    </form>
-    <ul id="solution"></ul>
+    <div class="container">
+      <h1>Memory Game</h1>
+
+      <div class="row1" id="row-1">
+        <div class="col-md-2"></div>
+      </div>
+
+      <div class="row2" id="row-2">
+        <div class="col-md-2"></div>
+      </div>
+
+      <div id="output-area">
+        <h3><span id="winner"></span></h3>
+        <img id="winning-pic" src="" alt="">
+      </div>
+
+    </div>
   </body>
 </html>
