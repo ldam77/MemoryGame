@@ -21,14 +21,25 @@ var cards = [
   new Card(img5, 10)
 ];
 
-
+/**
+ * Shuffles array in place. ES6 version
+ * @param {Array} a items An array containing the items.
+ */
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
 
 
 $(document).ready(function() {
+  shuffle(cards);
   var rowCount = 0;
   var currentRow = 1;
   for(var i = 1; i <= cards.length; i++) {
-  
+
     $("div.row"+currentRow).append(
       // "<h1>BOO!</h1>"
       "<div class='col-md-2' id='"+i+"'><img class='cardback' id='"+i+"pic' alt='back'></div>"
