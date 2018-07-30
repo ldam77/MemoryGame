@@ -33,6 +33,16 @@ function shuffle(a) {
     return a;
 }
 
+var cardOpen = 0;
+var card1;
+var card2;
+
+function changeImage(id, img){
+  var location = id+"pic";
+  document.getElementById(location).src = img;
+  cardOpen++;
+  if (cardOpen == 2)
+}
 
 $(document).ready(function() {
   shuffle(cards);
@@ -50,8 +60,10 @@ $(document).ready(function() {
       currentRow++;
     }
 
+
+
     $("#"+i).click(function() {
-      memoryGame(this.id, cards[this.id-1].img);
+      changeImage(this.id, cards[this.id-1].img);
     });
   }
 
